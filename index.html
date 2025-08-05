@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clock using Pure JS</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Clock</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <div id="ClockContainer">
-        <div id="hour"></div>
-        <div id="minute"></div>
-        <div id="second"></div>
+  <div class="clock-container">
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider round"></span>
+      </label>
+      <span class="theme-label" id="themeLabel">Dark Mode</span>
     </div>
 
+    <div class="clock">
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+      <div class="center-dot"></div>
+    </div>
+
+    <div class="digital-time" id="digitalTime">00:00:00 AM</div>
+    <div class="date-display" id="dateDisplay">01 Jan 2000</div>
+    <!-- Numbers on Clock Face -->
+    <div class="number" style="--n:1">1</div>
+    <div class="number" style="--n:2">2</div>
+    <div class="number" style="--n:3">3</div>
+    <div class="number" style="--n:4">4</div>
+    <div class="number" style="--n:5">5</div>
+    <div class="number" style="--n:6">6</div>
+    <div class="number" style="--n:7">7</div>
+    <div class="number" style="--n:8">8</div>
+    <div class="number" style="--n:9">9</div>
+    <div class="number" style="--n:10">10</div>
+    <div class="number" style="--n:11">11</div>
+    <div class="number" style="--n:12">12</div>
+
+
+    <!-- Optional ticking sound -->
+    <audio id="tickSound" src="https://www.soundjay.com/clock/sounds/clock-ticking-1.mp3"></audio>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
